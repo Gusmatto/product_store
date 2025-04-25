@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
-import { HomePage  } from '../pages/homePage';
+import { HomePage } from '../pages/homePage';
 
-let homePage: HomePage;
+let homePage;
 
 test.beforeEach(async ({ page }) => {
     homePage = new HomePage(page);
@@ -10,6 +10,7 @@ test.beforeEach(async ({ page }) => {
 
 test.describe('test suite - navigation and text verification', () => {
     test('should be able to verify and navigate tabs options', async ({ page }) => {
+        // await loginPage.apiLogin();
         await expect(page).toHaveURL('/');
 
         // Nav var
